@@ -1,4 +1,4 @@
-FROM alpine:3.14
+FROM alpine:3.15
 LABEL maintainer "Levent SAGIROGLU <LSagiroglu@gmail.com>"
 ARG VERSION=1.19.3
 RUN apk update && apk add --no-cache curl net-snmp net-snmp-tools ipmitool ca-certificates && update-ca-certificates 
