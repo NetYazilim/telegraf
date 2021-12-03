@@ -17,7 +17,7 @@ Sophos XG MIB for v17 and v18: https://docs.sophos.com/nsg/sophos-firewall/MIB/S
 # Build & Push example:
 
 ```
-.\build.cmd 1.19.3
-.\push.cmd 1.19.3
+.\build.cmd 1.20.4
+.\push.cmd 1.20.4
 ```
 
