@@ -1,7 +1,7 @@
-FROM alpine:3.15 as builder
-ARG VERSION=1.20.4
+FROM alpine:3.17 as builder
+ARG VERSION=1.26.0
 RUN apk update && apk add --no-cache curl ca-certificates && update-ca-certificates 
-RUN curl https://dl.influxdata.com/telegraf/releases/telegraf-${VERSION}_static_linux_amd64.tar.gz | tar xvz -C / --strip 2 ./telegraf-${VERSION}/usr/bin/telegraf ./telegraf-${VERSION}/etc/telegraf/
+RUN curl https://dl.influxdata.com/telegraf/releases/telegraf-${VERSION}_linux_amd64.tar.gz | tar xvz -C / --strip 2 ./telegraf-${VERSION}/usr/bin/telegraf ./telegraf-${VERSION}/etc/telegraf/
 
 FROM scratch
 LABEL maintainer "Levent SAGIROGLU <LSagiroglu@gmail.com>"
